@@ -1,0 +1,249 @@
+// Main JavaScript functionality
+class MDALSite {
+    constructor() {
+        this.currentSection = 'home';
+        this.isLoading = true;
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.handleLoading();
+        this.setupNavigation();
+        this.setupScrollEffects();
+        this.createFloatingParticles();
+    }
+
+    setupEventListeners() {
+        // DOM Content Loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            this.handleLoading();
+        });
+
+        // Window Load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                this.hideLoadingScreen();
+            }, 2000);
+        });
+
+        // Scroll Events
+        window.addEventListener('scroll', () => {
+            this.handleScroll();
+        });
+
+        // Resize Events
+        window.addEventListener('resize', () => {
+            this.handleResize();
+        });
+
+        // Navigation Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle?.classList.remove('active');
+                navMenu?.classList.remove('active');
+            });
+        });
+    }
+
+    handleLoading() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            // Simulate loading progress
+            const progressBar = document.querySelector('.loading-progress');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.width = '100%';
+                }, 100);
+            }
+        }
+    }
+
+    hideLoadingScreen() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+            this.isLoading = false;
+            
+            // Enable scroll after loading
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    setupNavigation() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetSection = link.getAttribute('data-section');
+                this.navigateToSection(targetSection);
+            });
+        });
+
+        // Update active nav on scroll
+        this.updateActiveNavigation();
+    }
+
+    navigateToSection(sectionId) {
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 70; // Account for fixed navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    updateActiveNavigation() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    
+                    // Update active nav link
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-section') === sectionId) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '-70px 0px -70px 0px'
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    }
+
+    handleScroll() {
+        const navbar = document.getElementById('navbar');
+        const scrollY = window.scrollY;
+
+        // Add scrolled class to navbar
+        if (scrollY > 50) {
+            navbar?.classList.add('scrolled');
+        } else {
+            navbar?.classList.remove('scrolled');
+        }
+
+        // Parallax effect for hero section
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection && scrollY < window.innerHeight) {
+            const parallaxSpeed = 0.5;
+            heroSection.style.transform = `translateY(${scrollY * parallaxSpeed}px)`;
+        }
+    }
+
+    handleResize() {
+        // Close mobile menu on resize
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (window.innerWidth > 768) {
+            navToggle?.classList.remove('active');
+            navMenu?.classList.remove('active');
+        }
+    }
+
+    createFloatingParticles() {
+        const particlesContainer = document.querySelector('.floating-particles');
+        if (!particlesContainer) return;
+
+        // Create additional floating particles
+        for (let i = 0; i < 5; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'floating-particle';
+            particle.style.cssText = `
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                animation: float ${6 + Math.random() * 4}s ease-in-out infinite;
+                animation-delay: ${Math.random() * 6}s;
+                top: ${Math.random() * 100}%;
+                left: ${Math.random() * 100}%;
+            `;
+            particlesContainer.appendChild(particle);
+        }
+    }
+}
+
+// Novel Chapter Toggle Functionality
+function toggleNovelChapter(chapterId) {
+    const chapterContent = document.getElementById(chapterId);
+    const chapterHeader = chapterContent?.previousElementSibling;
+    
+    if (chapterContent && chapterHeader) {
+        const isActive = chapterContent.classList.contains('active');
+        
+        // Close all other chapters
+        document.querySelectorAll('.chapter-content').forEach(content => {
+            content.classList.remove('active');
+            content.previousElementSibling?.classList.remove('active');
+        });
+        
+        // Toggle current chapter
+        if (!isActive) {
+            chapterContent.classList.add('active');
+            chapterHeader.classList.add('active');
+        }
+    }
+}
+
+// Glossary Tab Switching
+function switchTab(tabName) {
+    // Remove active class from all tabs and content
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Add active class to clicked tab and corresponding content
+    document.querySelector(`[onclick="switchTab('${tabName}')"]`)?.classList.add('active');
+    document.getElementById(tabName)?.classList.add('active');
+}
+
+// Scroll to Section Helper
+function scrollToSection(sectionId) {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+        const offsetTop = targetElement.offsetTop - 70;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Initialize the site
+const mdalSite = new MDALSite();
+
+// Export functions for global access
+window.toggleNovelChapter = toggleNovelChapter;
+window.switchTab = switchTab;
+window.scrollToSection = scrollToSection;
