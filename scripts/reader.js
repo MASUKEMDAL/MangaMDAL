@@ -11,46 +11,41 @@ class ChapterReader {
             1: {
                 title: "Capítulo 1 - O Renascimento de Masuke",
                 pages: [
-                    "public/images/capitulo1/1.jpg",
-                    "public/images/capitulo1/2.jpg",
-                    "public/images/capitulo1/3.jpg",
-                    "public/images/capitulo1/4.jpg",
-                    "public/images/capitulo1/5.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/Masuke%20Desing.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/Imagem%20do%20WhatsApp%20de%202025-04-22%20%C3%A0(s)%2019.52.35_7a222db5.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/PAGINA%202.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/3.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/4.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/5.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/6.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/7.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/8.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/9.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/10.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/11.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/12.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/13.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/capitu-1/refs/heads/main/14.jpg"
+                    "public/images/capitulo1/Pagina 1.jpg",
+                    "public/images/capitulo1/Pagina 2.jpg",
+                    "public/images/capitulo1/Pagina 3.jpg",
+                    "public/images/capitulo1/Pagina 4.jpg",
+                    "public/images/capitulo1/Pagina 5.jpg",
+                    "public/images/capitulo1/Pagina 7.jpg",
+                    "public/images/capitulo1/Pagina 8.jpg",
+                    "public/images/capitulo1/Pagina 9.jpg",
+                    "public/images/capitulo1/Pagina 10.jpg",
+                    "public/images/capitulo1/Pagina 11.jpg",
+                    "public/images/capitulo1/Pagina 12.jpg",
+                    "public/images/capitulo1/Pagina 13.jpg",
+                    "public/images/capitulo1/Pagina 14.jpg",
+                    "public/images/capitulo1/Pagina 15.jpg",
+                    "public/images/capitulo1/Pagina 16.jpg",
                 ]
             },
             2: {
                 title: "Capítulo 2 - Masuke VS Drakom",
                 pages: [
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%2010.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2010.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/paggina%201.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%202.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%203.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%202.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%203.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagian%204.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%205.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%206.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%207.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%208.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%209.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%2011.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%2012.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%2013.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%2014.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagina%2015.jpg"
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%205.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%206.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%207.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%208.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%209.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2011.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2012.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2013.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2014.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2015.jpg"
                 ]
             }
         };
@@ -185,7 +180,7 @@ class ChapterReader {
         pagesToLoad.forEach((pageIndex, i) => {
             const img = document.createElement('img');
             img.src = this.pages[pageIndex];
-            img.alt = `Página ${pageIndex + 1}`;
+            img.alt = `Pagina ${pageIndex + 1}`;
             img.className = 'reader-page';
             img.loading = i === 1 ? 'eager' : 'lazy'; // Eager load current page
             
