@@ -277,6 +277,49 @@
     font-weight: 500;
 }
 
+/* Novel Chapter Header with Download Button */
+.chapter-header {
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background var(--transition-fast);
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.chapter-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.download-btn {
+    background: var(--gradient-accent);
+    border: none;
+    color: var(--pure-white);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #ef4444 0%, #8b5cf6 100%);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
 /* Glossary Section */
 .glossary-section {
     background: var(--primary-black);

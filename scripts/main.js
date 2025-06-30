@@ -212,6 +212,84 @@ function toggleNovelChapter(chapterId) {
     }
 }
 
+// PDF Download Functionality
+function downloadPDF() {
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = 'public/novels/Capítulo 1 - O Principe das Trevas.docx';
+    link.download = 'MDAL - Capítulo 1 - O Príncipe das Trevas.docx';
+    
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Show download notification
+    showDownloadNotification();
+}
+
+// Show download notification
+function showDownloadNotification() {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'download-notification';
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas fa-download"></i>
+            <span>Download iniciado!</span>
+        </div>
+    `;
+    
+    // Add styles
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--gradient-accent);
+        color: var(--pure-white);
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        z-index: 3000;
+        animation: slideInRight 0.3s ease-out;
+    `;
+    
+    // Add animation styles
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-weight: 600;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Add to body
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideInRight 0.3s ease-out reverse';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+            document.head.removeChild(style);
+        }, 300);
+    }, 3000);
+}
+
 // Glossary Tab Switching
 function switchTab(tabName) {
     // Remove active class from all tabs and content
@@ -245,5 +323,6 @@ const mdalSite = new MDALSite();
 
 // Export functions for global access
 window.toggleNovelChapter = toggleNovelChapter;
+window.downloadPDF = downloadPDF;
 window.switchTab = switchTab;
 window.scrollToSection = scrollToSection;
