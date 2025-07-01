@@ -213,11 +213,28 @@ function toggleNovelChapter(chapterId) {
 }
 
 // PDF Download Functionality
-function downloadPDF() {
+function downloadPDF(chapterNumber) {
+    let fileName = '';
+    let downloadName = '';
+    
+    switch(chapterNumber) {
+        case 1:
+            fileName = 'public/novels/Capítulo 1 - O Principe das Trevas.docx';
+            downloadName = 'MDAL - Capítulo 1 - O Príncipe das Trevas.docx';
+            break;
+        case 2:
+            fileName = 'public/novels/Capítulo 2 - Masuke VS Drakom.docx';
+            downloadName = 'MDAL - Capítulo 2 - Masuke VS Drakom.docx';
+            break;
+        default:
+            console.error('Capítulo não encontrado');
+            return;
+    }
+    
     // Create a temporary link element
     const link = document.createElement('a');
-    link.href = 'public/novels/Capítulo 1 - O Principe das Trevas.docx';
-    link.download = 'MDAL - Capítulo 1 - O Príncipe das Trevas.docx';
+    link.href = fileName;
+    link.download = downloadName;
     
     // Append to body, click, and remove
     document.body.appendChild(link);

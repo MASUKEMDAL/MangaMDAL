@@ -130,8 +130,8 @@
                                 <h3>Capítulo 1</h3>
                                 <p>O Renascimento de Masuke</p>
                                 <div class="chapter-stats">
-                                    <span><i class="fas fa-images"></i> 20 Paginas</span>
-                                    <span><i class="fas fa-clock"></i> ~15 min</span>
+                                    <span><i class="fas fa-images"></i> 15 Páginas</span>
+                                    <span><i class="fas fa-clock"></i> ~12 min</span>
                                 </div>
                             </div>
                             <button class="btn-read" onclick="openChapterReader(1)">
@@ -151,7 +151,7 @@
                                 <h3>Capítulo 2</h3>
                                 <p>Masuke VS Drakom</p>
                                 <div class="chapter-stats">
-                                    <span><i class="fas fa-images"></i> 15 Paginas</span>
+                                    <span><i class="fas fa-images"></i> 15 Páginas</span>
                                     <span><i class="fas fa-clock"></i> ~12 min</span>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
         <div class="reader-header">
             <div class="reader-info">
                 <h3 id="reader-title">Capítulo 1 - O Renascimento de Masuke</h3>
-                <span id="reader-progress">1 / 20</span>
+                <span id="reader-progress">1 / 15</span>
             </div>
             <div class="reader-controls">
                 <button class="reader-btn" onclick="toggleFullscreen()">
@@ -206,7 +206,7 @@
                 Anterior
             </button>
             <div class="page-indicator">
-                <span id="current-page">1</span> / <span id="total-pages">20</span>
+                <span id="current-page">1</span> / <span id="total-pages">15</span>
             </div>
             <button class="nav-btn" id="next-page" onclick="nextPage()">
                 Próxima
@@ -236,7 +236,7 @@
                             <span class="chapter-status">Disponível</span>
                         </div>
                         <div class="chapter-actions">
-                            <button class="download-btn" onclick="downloadPDF()" title="Baixar PDF">
+                            <button class="download-btn" onclick="downloadPDF(1)" title="Baixar PDF">
                                 <i class="fas fa-download"></i>
                             </button>
                             <i class="fas fa-chevron-down"></i>
@@ -359,24 +359,178 @@
                             <h3>Capítulo 2: Masuke VS Drakom</h3>
                             <span class="chapter-status">Disponível</span>
                         </div>
-                        <i class="fas fa-chevron-down"></i>
+                        <div class="chapter-actions">
+                            <button class="download-btn" onclick="downloadPDF(2)" title="Baixar PDF">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
                     <div class="chapter-content" id="novel-chapter-2">
                         <div class="chapter-text">
-                            <p>O ar tremia com a tensão do confronto. Diante de Masuke, o espírito dos dragões,
-                            Magro, definido, olhos amarelos com pupilas de dragão. Escamas vermelhas dos ombros até os antebraços. 
-                            Unhas e dentes levemente afiados, sem camisa, calça preta, ergueu a voz:</p>
-                            
+                            <blockquote class="chapter-quote">
+                                "O verdadeiro poder não está em dominar os outros, mas em dominar a si mesmo."
+                            </blockquote>
+
+                            <h4>O Confronto Inevitável</h4>
+                            <p>Três meses haviam se passado desde a formação da MDAL. A organização crescia em poder e influência, mas nem tudo eram flores no grupo. Tensões começaram a surgir entre os membros, especialmente entre Masuke e Drakom.</p>
+
+                            <p>Drakom, o príncipe dos dragões, sempre foi orgulhoso e competitivo. Sua natureza dracônica o fazia questionar constantemente a liderança de Masuke, mesmo reconhecendo seu poder.</p>
+
+                            <h4>A Provocação</h4>
+                            <p>Era uma tarde sombria na base secreta da MDAL quando tudo começou. Os membros estavam treinando suas habilidades quando Drakom se aproximou de Masuke com um olhar desafiador.</p>
+
                             <div class="dialogue">
-                                <p>— Toma isso!! — bradou o espírito.</p>
-                                <p>Masuke franziu o cenho, surpreso.</p>
-                                <p>— Droga... quem é você? — perguntou, cerrando os punhos.</p>
+                                <p>— Masuke... — disse Drakom, seus olhos amarelos brilhando com intensidade dracônica.</p>
+                                <p>— O que foi, Drakom? — respondeu Masuke, sem desviar o olhar de seu treino.</p>
+                                <p>— Já faz tempo que quero testar meu poder contra o seu. Que tal uma luta?</p>
                             </div>
 
-                            <p>Seus olhos brilharam em tom sombrio enquanto ativava seu poder.</p>
-                            <p>— <strong>Áurea das Trevas...</strong> — murmurou Masuke.</p>
+                            <p>O ar ficou tenso. Shizuke e Hiroshi pararam seus treinos e se aproximaram, sentindo a energia pesada que emanava dos dois guerreiros.</p>
 
-                            <p class="chapter-end">Continua...</p>
+                            <div class="dialogue">
+                                <p>— Não é uma boa ideia, Drakom — interveio Shizuke. — Somos aliados.</p>
+                                <p>— Exatamente por isso! — replicou Drakom. — Como posso confiar em alguém cujo poder nunca vi completamente?</p>
+                            </div>
+
+                            <p>Masuke finalmente se virou, seus olhos negros encontrando os olhos dourados de Drakom. Por um momento, apenas o silêncio reinou entre eles.</p>
+
+                            <div class="dialogue">
+                                <p>— Se é isso que você quer... — murmurou Masuke. — Então que seja.</p>
+                            </div>
+
+                            <h4>O Campo de Batalha</h4>
+                            <p>Os quatro membros da MDAL se dirigiram para uma área isolada nos arredores da cidade, um vale rochoso onde poderiam lutar sem causar danos aos inocentes.</p>
+
+                            <p>Drakom se posicionou de um lado do vale, suas escamas vermelhas brilhando sob a luz do sol poente. Suas unhas se estenderam, tornando-se garras afiadas, e seus dentes se afiaram visivelmente.</p>
+
+                            <p>Do outro lado, Masuke permanecia calmo, sua capa preta tremulando no vento. Seus olhos negros pareciam absorver toda a luz ao redor.</p>
+
+                            <div class="dialogue">
+                                <p>— Vamos ver do que você é capaz, "líder" — provocou Drakom.</p>
+                                <p>— Cuidado com o que deseja — respondeu Masuke, sua voz ecoando com uma frieza sobrenatural.</p>
+                            </div>
+
+                            <h4>O Início da Batalha</h4>
+                            <p>Drakom foi o primeiro a atacar. Com um rugido que ecoou por todo o vale, ele invocou sua técnica signature:</p>
+
+                            <div class="dialogue">
+                                <p>— <strong>DRAISON!</strong></p>
+                            </div>
+
+                            <p>Uma esfera giratória de energia dracônica vermelha se formou em suas mãos, crescendo rapidamente em tamanho e poder. Com um movimento fluido, ele a arremessou em direção a Masuke.</p>
+
+                            <p>Masuke não se moveu. Apenas ergueu uma das mãos, e uma aura escura começou a emanar de seu corpo.</p>
+
+                            <div class="dialogue">
+                                <p>— <strong>Masuren...</strong></p>
+                            </div>
+
+                            <p>Raios de energia elétrica sombria dançaram ao redor de Masuke, formando uma barreira que absorveu completamente o Draison de Drakom. A energia dracônica simplesmente desapareceu no vazio negro que rodeava Masuke.</p>
+
+                            <p>Os olhos de Drakom se arregalaram de surpresa.</p>
+
+                            <div class="dialogue">
+                                <p>— Impossível... meu Draison nunca foi bloqueado assim!</p>
+                                <p>— Você ainda não viu nada — respondeu Masuke, avançando lentamente.</p>
+                            </div>
+
+                            <h4>A Escalada do Conflito</h4>
+                            <p>Drakom recuou e ativou sua segunda técnica:</p>
+
+                            <div class="dialogue">
+                                <p>— <strong>Making!</strong></p>
+                            </div>
+
+                            <p>Instantaneamente, ele desapareceu e reapareceu atrás de Masuke, suas garras visando o pescoço do líder da MDAL. Mas Masuke já havia previsto o movimento.</p>
+
+                            <p>Sem se virar, Masuke bloqueou o ataque com o antebraço, suas próprias energias sombrias formando uma armadura natural. O impacto criou uma onda de choque que rachou o solo ao redor deles.</p>
+
+                            <div class="dialogue">
+                                <p>— Rápido... mas previsível — comentou Masuke, girando e acertando um soco no estômago de Drakom.</p>
+                            </div>
+
+                            <p>Drakom foi arremessado para trás, batendo contra uma formação rochosa. Ele se levantou, cuspindo sangue, mas seus olhos brilhavam com ainda mais determinação.</p>
+
+                            <div class="dialogue">
+                                <p>— Agora você me irritou! — rugiu Drakom. — <strong>Invocação Dracônica!</strong></p>
+                            </div>
+
+                            <p>O céu escureceu quando três grandes dragões vermelhos se materializaram ao redor de Drakom. Suas presenças eram imponentes, e o calor que emanavam fazia o ar tremer.</p>
+
+                            <h4>O Poder Verdadeiro</h4>
+                            <p>Masuke observou os dragões com interesse, mas não demonstrou medo. Em vez disso, um sorriso sombrio apareceu em seu rosto.</p>
+
+                            <div class="dialogue">
+                                <p>— Interessante... mas deixe-me mostrar algo realmente assustador.</p>
+                            </div>
+
+                            <p>Os olhos de Masuke mudaram. O negro profundo se intensificou, tornando-se um vazio absoluto que parecia sugar a própria luz. Eram os temidos <strong>Death Eyes</strong>.</p>
+
+                            <div class="dialogue">
+                                <p>— Venha, <strong>Mr. Morte</strong>.</p>
+                            </div>
+
+                            <p>Uma figura sombria emergiu das trevas atrás de Masuke. Era um ceifador encapuzado, carregando uma foice que parecia ser feita da própria escuridão. Sua presença fez os dragões de Drakom recuarem instintivamente.</p>
+
+                            <p>Shizuke e Hiroshi, que assistiam à distância, sentiram um calafrio percorrer suas espinhas. Mesmo sendo aliados de Masuke, a aura de Mr. Morte era aterrorizante.</p>
+
+                            <h4>O Clímax da Batalha</h4>
+                            <p>Drakom, montado em um de seus dragões, atacou do alto. Os três dragões lançaram rajadas de fogo dracônico simultaneamente, criando um inferno que cobriu todo o vale.</p>
+
+                            <p>Mas quando a fumaça se dissipou, Masuke e Mr. Morte estavam intactos. O ceifador havia criado um domo de energia sombria que absorveu todo o fogo.</p>
+
+                            <div class="dialogue">
+                                <p>— Minha vez — disse Masuke friamente.</p>
+                            </div>
+
+                            <p>Mr. Morte desapareceu e reapareceu instantaneamente ao lado de cada dragão, sua foice cortando através de suas formas etéreas. Um por um, os dragões se dissolveram em energia vermelha que foi absorvida pela escuridão.</p>
+
+                            <p>Drakom caiu no chão, exausto. Toda sua energia dracônica havia sido drenada.</p>
+
+                            <h4>O Reconhecimento</h4>
+                            <p>Masuke se aproximou de Drakom, que estava ajoelhado no chão, respirando pesadamente. Mr. Morte desapareceu nas sombras, e os Death Eyes de Masuke voltaram ao normal.</p>
+
+                            <div class="dialogue">
+                                <p>— Você... você é realmente poderoso — admitiu Drakom, olhando para cima. — Eu entendo agora por que você é nosso líder.</p>
+                                <p>— O poder não é tudo, Drakom — respondeu Masuke, estendendo a mão para ajudá-lo a se levantar. — A confiança entre nós é mais importante.</p>
+                            </div>
+
+                            <p>Drakom aceitou a mão de Masuke e se levantou. Por um momento, os dois se olharam com respeito mútuo.</p>
+
+                            <div class="dialogue">
+                                <p>— Desculpe por duvidar de você — disse Drakom.</p>
+                                <p>— Não se desculpe. Questionar é natural. Apenas confie que sempre lutarei ao seu lado.</p>
+                            </div>
+
+                            <h4>A União Fortalecida</h4>
+                            <p>Shizuke e Hiroshi se aproximaram, aliviados por ver que a luta havia terminado sem ferimentos graves.</p>
+
+                            <div class="dialogue">
+                                <p>— Vocês dois são monstros — comentou Hiroshi, balançando a cabeça. — Fico feliz por estar do lado de vocês.</p>
+                                <p>— A MDAL é mais forte quando lutamos juntos — acrescentou Shizuke.</p>
+                            </div>
+
+                            <p>Masuke olhou para seus três companheiros e sentiu algo que raramente experimentava: um senso de pertencimento. Eles não eram apenas aliados; eram uma família forjada na batalha e unida por um propósito comum.</p>
+
+                            <h4>O Novo Começo</h4>
+                            <p>Enquanto caminhavam de volta para a base, Drakom se virou para Masuke:</p>
+
+                            <div class="dialogue">
+                                <p>— Masuke... obrigado por me mostrar o verdadeiro significado de poder.</p>
+                                <p>— E obrigado por me lembrar que até mesmo os líderes precisam provar seu valor.</p>
+                            </div>
+
+                            <p>A partir daquele dia, a MDAL se tornou mais unida do que nunca. O confronto entre Masuke e Drakom não os dividiu; ao contrário, fortaleceu os laços entre todos os membros.</p>
+
+                            <p>E nas sombras do mundo espiritual, rumores começaram a se espalhar sobre uma organização misteriosa cujos membros possuíam poderes além da compreensão comum. A lenda da MDAL estava apenas começando.</p>
+
+                            <blockquote class="chapter-quote">
+                                "A verdadeira força de um grupo não está na ausência de conflitos, mas na capacidade de superá-los juntos."
+                                <cite>— Masuke</cite>
+                            </blockquote>
+
+                            <p class="chapter-end">Continua no próximo capítulo...</p>
                         </div>
                     </div>
                 </div>
@@ -416,82 +570,75 @@
                 </div>
 
                 <div class="character-card">
-    <div class="character-image">
-        <div class="character-placeholder dragon-theme">
-            <img src="public/images/Drakom .png" alt="Drakom" class="character-img" loading="lazy">
-        </div>
-        <div class="character-aura drakom-aura"></div>
-    </div>
-    <div class="character-info">
-        <h3>Drakom</h3>
-        <span class="character-title">Domador de Dragões</span>
-        <p>Príncipe dos dragões que se juntou à MDAL. Mestre em invocações dracônicas e teletransporte.</p>
-        <div class="character-abilities">
-            <span class="ability-tag">Draison</span>
-            <span class="ability-tag">Making</span>
-            <span class="ability-tag">Invocação de Dragões</span>
-        </div>
-    </div>
-</div>
-
+                    <div class="character-image">
+                        <img src="public/images/Drakom .png" alt="Drakom" loading="lazy">
+                        <div class="character-aura drakom-aura"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Drakom</h3>
+                        <span class="character-title">Domador de Dragões</span>
+                        <p>Príncipe dos dragões que se juntou à MDAL. Mestre em invocações dracônicas e teletransporte.</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag">Draison</span>
+                            <span class="ability-tag">Making</span>
+                            <span class="ability-tag">Invocação de Dragões</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="character-card">
-    <div class="character-image">
-        <div class="character-placeholder water-theme">
-            <img src="public/images/Shizuke.png" alt="Shizuke" class="character-img" loading="lazy">
-        </div>
-        <div class="character-aura shizuke-aura"></div>
-    </div>
-    <div class="character-info">
-        <h3>Shizuke</h3>
-        <span class="character-title">Tridente da Água</span>
-        <p>Controlador das águas que carrega o tridente de Poseidon. Ex-membro da Sociedade Fênix.</p>
-        <div class="character-abilities">
-            <span class="ability-tag">Fênix de Água</span>
-            <span class="ability-tag">Shizurem</span>
-            <span class="ability-tag">Réplica de Água</span>
-        </div>
-    </div>
-</div>
-
+                    <div class="character-image">
+                        <img src="public/images/Shizuke.png" alt="Shizuke" loading="lazy">
+                        <div class="character-aura shizuke-aura"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Shizuke</h3>
+                        <span class="character-title">Tridente da Água</span>
+                        <p>Controlador das águas que carrega o tridente de Poseidon. Ex-membro da Sociedade Fênix.</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag">Fênix de Água</span>
+                            <span class="ability-tag">Shizurem</span>
+                            <span class="ability-tag">Réplica de Água</span>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="character-card">
-    <div class="character-image">
-        <div class="character-placeholder earth-theme">
-            <img src="public/images/hiroshi.png" alt="Hiroshi" class="character-img" loading="lazy">
-        </div>
-        <div class="character-aura hiroshi-aura"></div>
-    </div>
-    <div class="character-info">
-        <h3>Hiroshi</h3>
-        <span class="character-title">Dragão da Terra</span>
-        <p>O "Tolo Forte" da MDAL, mestre em técnicas de terra e defesa impenetrável.</p>
-        <div class="character-abilities">
-            <span class="ability-tag">Armadura de Dragão</span>
-            <span class="ability-tag">Muralha de Terra</span>
-            <span class="ability-tag">Pisada Sísmica</span>
-        </div>
-    </div>
-</div>
+                    <div class="character-image">
+                        <img src="public/images/hiroshi.png" alt="Hiroshi" loading="lazy">
+                        <div class="character-aura hiroshi-aura"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Hiroshi</h3>
+                        <span class="character-title">Dragão da Terra</span>
+                        <p>O "Tolo Forte" da MDAL, mestre em técnicas de terra e defesa impenetrável.</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag">Armadura de Dragão</span>
+                            <span class="ability-tag">Muralha de Terra</span>
+                            <span class="ability-tag">Pisada Sísmica</span>
+                        </div>
+                    </div>
+                </div>
 
-<div class="character-card">
-    <div class="character-image">
-        <div class="character-placeholder tech-theme">
-            <img src="public/images/Moshu.jpg" alt="Moshu Misurushi" class="character-img" loading="lazy">
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="public/images/Moshu.jpg" alt="Moshu Misurushi" loading="lazy">
+                        <div class="character-aura moshu-aura"></div>
+                    </div>
+                    <div class="character-info">
+                        <h3>Moshu Misurushi</h3>
+                        <span class="character-title">Professor Mecânico</span>
+                        <p>Um ciborgue lendário da Academia Espiritual Central. Meio homem, meio máquina — mas 100% sabedoria e poder oculto.</p>
+                        <div class="character-abilities">
+                            <span class="ability-tag">Visão Cibernética</span>
+                            <span class="ability-tag">Circuito Mental</span>
+                            <span class="ability-tag">Raio de Análise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="character-aura moshu-aura"></div>
-    </div>
-    <div class="character-info">
-        <h3>Moshu Misurushi</h3>
-        <span class="character-title">Professor Mecânico</span>
-        <p>Um ciborgue lendário da Academia Espiritual Central. Meio homem, meio máquina — mas 100% sabedoria e poder oculto.</p>
-        <div class="character-abilities">
-            <span class="ability-tag">Visão Cibernética</span>
-            <span class="ability-tag">Circuito Mental</span>
-            <span class="ability-tag">Raio de Análise</span>
-        </div>
-    </div>
-</div>
+    </section>
 
     <!-- Glossary Section -->
     <section id="glossary" class="glossary-section">
@@ -526,8 +673,13 @@
                     <div class="glossary-grid">
                         <div class="glossary-card mdal-card">
                             <div class="card-header">
-                                <h3>MDAL</h3>
-                                <span class="society-type">Organização Central</span>
+                                <div class="society-icon">
+                                    <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="MDAL Symbol" class="society-image">
+                                </div>
+                                <div>
+                                    <h3>MDAL</h3>
+                                    <span class="society-type">Organização Central</span>
+                                </div>
                             </div>
                             <p>Masuke Death A Lenda - Organização sombria, elitista e secreta. Representada por capas pretas com sigla MDAL.</p>
                             <div class="members-list">
@@ -537,8 +689,13 @@
 
                         <div class="glossary-card phoenix-card">
                             <div class="card-header">
-                                <h3>Sociedade de Phenix</h3>
-                                <span class="society-type">Tecnologia & Renascimento</span>
+                                <div class="society-icon">
+                                    <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Sociedade Fênix" class="society-image">
+                                </div>
+                                <div>
+                                    <h3>Sociedade de Phenix</h3>
+                                    <span class="society-type">Tecnologia & Renascimento</span>
+                                </div>
                             </div>
                             <p>Organização ligada à reconstrução, renascimento e tecnologia avançada.</p>
                             <div class="members-list">
@@ -548,8 +705,13 @@
 
                         <div class="glossary-card demons-card">
                             <div class="card-header">
-                                <h3>Sociedade Demons</h3>
-                                <span class="society-type">Caos & Destruição</span>
+                                <div class="society-icon">
+                                    <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Sociedade Demons" class="society-image">
+                                </div>
+                                <div>
+                                    <h3>Sociedade Demons</h3>
+                                    <span class="society-type">Caos & Destruição</span>
+                                </div>
                             </div>
                             <p>Organização vilanesca focada em tortura, dominação e caos absoluto.</p>
                             <div class="members-list">
@@ -562,18 +724,30 @@
                 <div id="techniques" class="tab-content">
                     <div class="techniques-grid">
                         <div class="technique-card darkness-technique">
+                            <div class="technique-icon">
+                                <img src="public/images/MASUREN.png" alt="Masuren" class="technique-image">
+                            </div>
                             <h4>Masuren</h4>
                             <p>Energia elétrica sombria com raios escuros e brilho arroxeado. Usada em ataques corpo a corpo e projéteis.</p>
                         </div>
                         <div class="technique-card fire-technique">
+                            <div class="technique-icon">
+                                <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Fogo da Escuridão" class="technique-image">
+                            </div>
                             <h4>Fogo da Escuridão</h4>
                             <p>Fogo negro com labaredas roxas que causa paralisia e dor contínua.</p>
                         </div>
                         <div class="technique-card dragon-technique">
+                            <div class="technique-icon">
+                                <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Draison" class="technique-image">
+                            </div>
                             <h4>Draison</h4>
                             <p>Esfera giratória de energia dracônica vermelha que causa explosão em espiral.</p>
                         </div>
                         <div class="technique-card teleport-technique">
+                            <div class="technique-icon">
+                                <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Making" class="technique-image">
+                            </div>
                             <h4>Making</h4>
                             <p>Teletransporte instantâneo baseado em energia dracônica sensitiva.</p>
                         </div>
@@ -583,10 +757,16 @@
                 <div id="invocations" class="tab-content">
                     <div class="invocations-grid">
                         <div class="invocation-card death-invocation">
+                            <div class="invocation-icon">
+                                <img src="public/images/Mr Morte.jpg" alt="Mr. Morte" class="invocation-image">
+                            </div>
                             <h4>Mr. Morte</h4>
                             <p>Ceifador sombrio invocado pelos Death Eyes de Masuke. Possui habilidades próprias de extinção.</p>
                         </div>
                         <div class="invocation-card dragon-invocation">
+                            <div class="invocation-icon">
+                                <img src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Dragões de Drakom" class="invocation-image">
+                            </div>
                             <h4>Dragões de Drakom</h4>
                             <p>Grandes dragões vermelhos de energia para ataque, defesa e montaria espiritual.</p>
                         </div>
@@ -602,7 +782,7 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="author-section">
-                        <img src="https://th.bing.com/th/id/OIP.ELC0yOIH-f0uyOBwyOZU3QHaHa?w=180&h=180&c=7&r=0&o=5&pid=1.7" alt="Matheus Marques Ferreira" class="author-photo">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Matheus Marques Ferreira" class="author-photo">
                         <div class="author-details">
                             <h4>Matheus Marques Ferreira</h4>
                             <p class="author-quote">"Faz o M."</p>
@@ -621,7 +801,7 @@
                 <div class="footer-quote">
                     <blockquote>
                         "Na escuridão, só os que controlam a própria sombra conseguem guiar a luz."
-                        <cite>— Masuke, capítulo 3</cite>
+                        <cite>— Masuke</cite>
                     </blockquote>
                 </div>
             </div>
