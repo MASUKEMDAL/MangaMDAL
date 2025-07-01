@@ -11,21 +11,21 @@ class ChapterReader {
             1: {
                 title: "Capítulo 1 - O Renascimento de Masuke",
                 pages: [
-                    "public/images/capitulo1/Pagina 1.jpg",
-                    "public/images/capitulo1/Pagina 2.jpg",
-                    "public/images/capitulo1/Pagina 3.jpg",
-                    "public/images/capitulo1/pagina 4.jpg",
-                    "public/images/capitulo1/pagina 5.jpg",
-                    "public/images/capitulo1/pagina 7.jpg",
-                    "public/images/capitulo1/pagina 8.jpg",
-                    "public/images/capitulo1/pagina 9.jpg",
-                    "public/images/capitulo1/pagina 10.jpg",
-                    "public/images/capitulo1/pagina 11.jpg",
-                    "public/images/capitulo1/pagina 12.jpg",
-                    "public/images/capitulo1/pagina 13.jpg",
-                    "public/images/capitulo1/pagina 14.jpg",
-                    "public/images/capitulo1/pagina 15.jpg",
-                    "public/images/capitulo1/pagina 16.jpg"
+                    "public/images/capitulo1/1.jpg",
+                    "public/images/capitulo1/2.jpg",
+                    "public/images/capitulo1/3.jpg",
+                    "public/images/capitulo1/4.jpg",
+                    "public/images/capitulo1/5.jpg",
+                    "public/images/capitulo1/6.jpg",
+                    "public/images/capitulo1/7.jpg",
+                    "public/images/capitulo1/8.jpg",
+                    "public/images/capitulo1/9.jpg",
+                    "public/images/capitulo1/10.jpg",
+                    "public/images/capitulo1/11.jpg",
+                    "public/images/capitulo1/12.jpg",
+                    "public/images/capitulo1/13.jpg",
+                    "public/images/capitulo1/14.jpg",
+                    "public/images/capitulo1/15.jpg"
                 ]
             },
             2: {
