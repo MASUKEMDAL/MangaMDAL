@@ -230,6 +230,10 @@ function downloadPDF(chapterNumber) {
             fileName = 'public/novels/Capítulo 3 - Invasão em PHENIX.docx';
             downloadName = 'MDAL - Capítulo 3 - Invasão em PHENIX.docx';
             break;
+        case 4:
+            fileName = 'public/novels/Capítulo 4 - O Confronto com a Demons.docx';
+            downloadName = 'MDAL - Capítulo 4 - O Confronto com a Demons.docx';
+            break;
         default:
             console.error('Capítulo não encontrado');
             return;

@@ -369,6 +369,46 @@
               </div>
             </div>
           </div>
+
+          <!-- Novo Capítulo 4 -->
+          <div class="novel-chapter">
+            <div
+              class="chapter-header"
+              onclick="toggleNovelChapter('novel-chapter-4')"
+            >
+              <div class="chapter-title">
+                <h3>Capítulo 4: O Confronto com a Demons</h3>
+                <span class="chapter-status">Disponível</span>
+              </div>
+              <div class="chapter-actions">
+                <button
+                  class="download-btn"
+                  onclick="downloadPDF(4)"
+                  title="Baixar PDF"
+                >
+                  <i class="fas fa-download"></i>
+                </button>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="chapter-content" id="novel-chapter-4">
+              <div class="chapter-text">
+                <div class="download-notice">
+                  <i class="fas fa-file-pdf"></i>
+                  <h4>Para ler este capítulo, baixe o PDF</h4>
+                  <p>
+                    O conteúdo completo está disponível para download em formato
+                    PDF. Clique no botão de download acima para acessar a
+                    história completa.
+                  </p>
+                  <button class="btn btn-primary" onclick="downloadPDF(4)">
+                    <i class="fas fa-download"></i>
+                    Baixar Capítulo 4
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -480,8 +520,22 @@
                   <img
                     src="public/images/Drakom/Drakom MDAL.jpeg"
                     alt="Drakom 2"
-                    class="carousel-image active"
+                    class="carousel-image"
                   />
+                </div>
+                <div class="carousel-controls">
+                  <button
+                    class="carousel-btn prev"
+                    onclick="changeCarouselImage('drakom', -1)"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button
+                    class="carousel-btn next"
+                    onclick="changeCarouselImage('drakom', 1)"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
                 </div>
                 <div class="carousel-indicators">
                   <span
@@ -489,7 +543,7 @@
                     onclick="setCarouselImage('drakom', 0)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('drakom', 1)"
                   ></span>
                 </div>
@@ -538,13 +592,27 @@
                   <img
                     src="public/images/Shizuke/Conceito Shizuke.png"
                     alt="Shizuke Conceito"
-                    class="carousel-image active"
+                    class="carousel-image"
                   />
                   <img
                     src="public/images/Shizuke/Shizuke Variacao.png"
                     alt="Shizuke variacao"
-                    class="carousel-image active"
+                    class="carousel-image"
                   />
+                </div>
+                <div class="carousel-controls">
+                  <button
+                    class="carousel-btn prev"
+                    onclick="changeCarouselImage('shizuke', -1)"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button
+                    class="carousel-btn next"
+                    onclick="changeCarouselImage('shizuke', 1)"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
                 </div>
                 <div class="carousel-indicators">
                   <span
@@ -552,11 +620,11 @@
                     onclick="setCarouselImage('shizuke', 0)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('shizuke', 1)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('shizuke', 2)"
                   ></span>
                 </div>
@@ -619,17 +687,31 @@
                     class="carousel-image"
                   />
                 </div>
+                <div class="carousel-controls">
+                  <button
+                    class="carousel-btn prev"
+                    onclick="changeCarouselImage('hiroshi', -1)"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button
+                    class="carousel-btn next"
+                    onclick="changeCarouselImage('hiroshi', 1)"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
                 <div class="carousel-indicators">
                   <span
                     class="indicator active"
                     onclick="setCarouselImage('hiroshi', 0)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('hiroshi', 1)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('hiroshi', 2)"
                   ></span>
                 </div>
@@ -733,13 +815,27 @@
                   <img
                     src="public/images/Macuso/demons.png"
                     alt="Macuso 2"
-                    class="carousel-image active"
+                    class="carousel-image"
                   />
                   <img
                     src="public/images/Macuso/conceito macuso.png"
                     alt="Macuso Conceito"
-                    class="carousel-image active"
+                    class="carousel-image"
                   />
+                </div>
+                <div class="carousel-controls">
+                  <button
+                    class="carousel-btn prev"
+                    onclick="changeCarouselImage('macuso', -1)"
+                  >
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button
+                    class="carousel-btn next"
+                    onclick="changeCarouselImage('macuso', 1)"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
                 </div>
                 <div class="carousel-indicators">
                   <span
@@ -747,11 +843,11 @@
                     onclick="setCarouselImage('macuso', 0)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('macuso', 1)"
                   ></span>
                   <span
-                    class="indicator active"
+                    class="indicator"
                     onclick="setCarouselImage('macuso', 2)"
                   ></span>
                 </div>

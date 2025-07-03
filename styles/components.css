@@ -214,7 +214,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
     opacity: 0;
     transition: opacity var(--transition-normal);
 }
@@ -234,6 +234,7 @@
     padding: 0 var(--spacing-sm);
     opacity: 0;
     transition: opacity var(--transition-fast);
+    z-index: 10;
 }
 
 .character-carousel:hover .carousel-controls {
@@ -241,7 +242,7 @@
 }
 
 .carousel-btn {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     border: none;
     color: var(--pure-white);
     width: 40px;
@@ -252,11 +253,14 @@
     justify-content: center;
     cursor: pointer;
     transition: all var(--transition-fast);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(220, 38, 38, 0.9);
     transform: scale(1.1);
+    border-color: var(--accent-red);
 }
 
 .carousel-indicators {
@@ -266,20 +270,23 @@
     transform: translateX(-50%);
     display: flex;
     gap: var(--spacing-xs);
+    z-index: 10;
 }
 
 .indicator {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all var(--transition-fast);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .indicator.active {
-    background: var(--pure-white);
+    background: var(--accent-red);
     transform: scale(1.2);
+    border-color: var(--accent-red);
 }
 
 .character-aura {
@@ -366,19 +373,20 @@
     box-shadow: var(--shadow-sm);
 }
 
-/* Ability Modal */
+/* Ability Modal - Aumentado */
 .ability-modal {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     z-index: 3000;
     display: none;
     align-items: center;
     justify-content: center;
     padding: var(--spacing-md);
+    backdrop-filter: blur(10px);
 }
 
 .ability-modal.active {
@@ -388,61 +396,77 @@
 .modal-content {
     background: var(--secondary-black);
     border-radius: var(--radius-xl);
-    max-width: 600px;
+    max-width: 900px;
     width: 100%;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow-y: auto;
     box-shadow: var(--shadow-xl);
+    border: 2px solid var(--dark-gray);
 }
 
 .modal-header {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     border-bottom: 1px solid var(--dark-gray);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--tertiary-black);
 }
 
 .modal-header h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--pure-white);
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .modal-close {
     background: none;
     border: none;
     color: var(--medium-gray);
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: color var(--transition-fast);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .modal-close:hover {
-    color: var(--pure-white);
+    color: var(--accent-red);
+    background: rgba(220, 38, 38, 0.1);
 }
 
 .modal-body {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
 }
 
 .ability-image {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
 }
 
 .ability-image img {
     max-width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
+    border: 3px solid var(--dark-gray);
 }
 
 .ability-description p {
     color: var(--light-gray);
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    font-family: var(--font-secondary);
 }
 
 /* Chapter Header */
@@ -572,11 +596,12 @@
 }
 
 .society-icon {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: var(--radius-md);
     overflow: hidden;
     flex-shrink: 0;
+    border: 3px solid var(--dark-gray);
 }
 
 .society-image {
