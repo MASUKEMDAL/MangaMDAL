@@ -226,6 +226,10 @@ function downloadPDF(chapterNumber) {
             fileName = 'public/novels/Capítulo 2 - Masuke VS Drakom.docx';
             downloadName = 'MDAL - Capítulo 2 - Masuke VS Drakom.docx';
             break;
+        case 3:
+            fileName = 'public/novels/Capítulo 3 - Invasão em PHENIX.docx';
+            downloadName = 'MDAL - Capítulo 3 - Invasão em PHENIX.docx';
+            break;
         default:
             console.error('Capítulo não encontrado');
             return;

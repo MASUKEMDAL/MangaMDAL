@@ -1,265 +1,304 @@
 /* Estilo para o leitor de capítulos que cobre toda a tela */
 .chapter-reader {
-    position: fixed; /* Fixa o elemento na posição, sobre outros elementos */
-    top: 0; /* Posiciona no topo da viewport */
-    left: 0; /* Posiciona à esquerda da viewport */
-    right: 0; /* Estende até a direita da viewport */
-    bottom: 0; /* Estende até a parte inferior da viewport */
-    background: var(--primary-black); /* Cor de fundo preta escura */
-    z-index: 2000; /* Prioridade de sobreposição alta */
-    display: none; /* Escondido por padrão */
-    flex-direction: column; /* Organiza o conteúdo em coluna */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-black);
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
 }
 
-/* Torna o leitor visível ao ativar a classe 'active' */
 .chapter-reader.active {
-    display: flex; /* Exibe como Flexbox */
+    display: flex;
 }
 
-/* Cabeçalho do leitor de capítulos */
 .reader-header {
-    background: var(--secondary-black); /* Fundo preto escuro */
-    padding: var(--spacing-md) var(--spacing-lg); /* Espaçamento interno */
-    display: flex; /* Disposição em linha */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Distribui espaço entre itens */
-    border-bottom: 1px solid var(--dark-gray); /* Borda inferior cinza escuro */
-    box-shadow: var(--shadow-sm); /* Sombra suave */
+    background: var(--secondary-black);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark-gray);
+    box-shadow: var(--shadow-sm);
 }
 
-/* Título ou informações do leitor */
 .reader-info h3 {
-    font-size: 1.2rem; /* Tamanho do texto */
-    font-weight: 600; /* Peso da fonte */
-    margin-bottom: var(--spacing-xs); /* Espaçamento abaixo */
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
 }
 
-/* Texto que mostra o progresso de leitura */
 .reader-progress {
-    color: var(--medium-gray); /* Cor do texto */
-    font-size: 0.9rem; /* Tamanho do texto */
+    color: var(--medium-gray);
+    font-size: 0.9rem;
 }
 
-/* Controles do leitor, como botões de navegação */
 .reader-controls {
-    display: flex; /* Disposição em linha */
-    gap: var(--spacing-sm); /* Espaçamento entre botões */
+    display: flex;
+    gap: var(--spacing-sm);
 }
 
-/* Estilo para botões do leitor */
 .reader-btn {
-    background: var(--tertiary-black); /* Fundo preto terciário */
-    border: none; /* Sem borda */
-    color: var(--pure-white); /* Cor do texto ou ícone */
-    padding: var(--spacing-sm); /* Espaçamento interno */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de clique */
-    transition: all var(--transition-fast); /* Transição rápida */
-    width: 40px; /* Largura fixa */
-    height: 40px; /* Altura fixa */
-    display: flex; /* Centraliza conteúdo interno */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    background: var(--tertiary-black);
+    border: none;
+    color: var(--pure-white);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Efeito ao passar o mouse no botão */
 .reader-btn:hover {
-    background: var(--dark-gray); /* Fundo cinza escuro ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento */
+    background: var(--dark-gray);
+    transform: scale(1.05);
 }
 
-/* Área principal de leitura, onde as páginas aparecem */
 .reader-content {
-    flex: 1; /* Ocupa espaço restante */
-    overflow-y: auto; /* Scroll vertical se necessário */
-    display: flex; /* Centraliza o conteúdo */
-    align-items: center; /* Verticalmente ao centro */
-    justify-content: center; /* Horizontalmente ao centro */
-    padding: var(--spacing-md); /* Espaçamento interno */
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
 }
 
-/* Limite máximo de largura das páginas de leitura */
 .reader-pages {
-    max-width: 800px; /* Ajuste aqui para aumentar/diminuir o tamanho das páginas */
-    width: 100%; /* Preenche o espaço disponível */
+    max-width: 800px;
+    width: 100%;
 }
 
-/* Cada página de leitura */
 .reader-page {
-    width: 100%; /* Ocupa toda a largura do container */
-    height: auto; /* Altura automática */
-    display: block; /* Exibe como bloco */
-    margin: 0 auto var(--spacing-md) auto; /* Centralizado com margem inferior */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    box-shadow: var(--shadow-lg); /* Sombra mais forte */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto var(--spacing-md) auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
 }
 
-/* Área de navegação entre páginas */
 .reader-navigation {
-    background: var(--secondary-black); /* Fundo preto escuro */
-    padding: var(--spacing-md) var(--spacing-lg); /* Espaçamento interno */
-    display: flex; /* Disposição em linha */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Espaço entre botões */
-    border-top: 1px solid var(--dark-gray); /* Borda superior cinza escuro */
+    background: var(--secondary-black);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--dark-gray);
 }
 
-/* Botões de navegação entre páginas */
 .nav-btn {
-    background: var(--gradient-accent); /* Gradiente de destaque */
-    border: none; /* Sem borda */
-    color: var(--pure-white); /* Cor do texto ou ícone */
-    padding: var(--spacing-sm) var(--spacing-lg); /* Espaçamento interno */
-    border-radius: var(--radius-lg); /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de clique */
-    font-weight: 600; /* Negrito moderado */
-    display: flex; /* Centraliza ícone/texto */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-xs); /* Espaçamento entre ícone e texto */
-    transition: all var(--transition-fast); /* Transição rápida */
+    background: var(--gradient-accent);
+    border: none;
+    color: var(--pure-white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all var(--transition-fast);
 }
 
-/* Efeito ao passar o mouse nos botões de navegação */
 .nav-btn:hover {
-    transform: translateY(-2px); /* Leve movimento para cima */
-    box-shadow: var(--shadow-md); /* Sombra ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-/* Estado desabilitado dos botões */
 .nav-btn:disabled {
-    opacity: 0.5; /* Transparência reduzida */
-    cursor: not-allowed; /* Cursor proibido */
-    transform: none; /* Sem transformação */
-    box-shadow: none; /* Sem sombra */
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
 }
 
-/* Indicador de página atual ou número */
 .page-indicator {
-    font-weight: 600; /* Negrito */
-    color: var(--light-gray); /* Cor do texto */
+    font-weight: 600;
+    color: var(--light-gray);
 }
 
-/* Seção de personagens */
+/* Download Notice Styles */
+.download-notice {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--tertiary-black);
+    border-radius: var(--radius-lg);
+    border: 2px dashed var(--dark-gray);
+}
+
+.download-notice i {
+    font-size: 3rem;
+    color: var(--accent-red);
+    margin-bottom: var(--spacing-md);
+}
+
+.download-notice h4 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--pure-white);
+}
+
+.download-notice p {
+    color: var(--light-gray);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+/* Characters Section */
 .characters-section {
-    background: var(--secondary-black); /* Fundo preto escuro */
+    background: var(--secondary-black);
 }
 
-/* Grid de personagens, ajustável com o tamanho mínimo desejado */
 .characters-grid {
-    display: grid; /* Grid CSS */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste aqui para aumentar o tamanho mínimo das colunas (ex: 400px) */
-    gap: var(--spacing-xl); /* Espaçamento entre os itens */
-    margin-top: var(--spacing-2xl); /* Margem superior */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
 }
 
-/* Cartão de personagem individual */
 .character-card {
-    background: var(--tertiary-black); /* Fundo preto terciário */
-    border-radius: var(--radius-xl); /* Bordas arredondadas maiores */
-    overflow: hidden; /* Esconde overflow */
-    box-shadow: var(--shadow-lg); /* Sombra forte */
-    transition: all var(--transition-normal); /* Transição normal */
-    position: relative; /* Para posicionar elementos internos */
+    background: var(--tertiary-black);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-normal);
+    position: relative;
 }
 
-/* Efeito ao passar o mouse no cartão de personagem */
 .character-card:hover {
-    transform: translateY(-8px); /* Leve movimento para cima */
-    box-shadow: var(--shadow-xl); /* Sombra maior */
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
 }
 
-/* Cartão de personagem principal que ocupa duas colunas na grade */
 .character-card.main-character {
-    grid-column: span 2; /* Ocupa duas colunas na grade */
-    display: grid; /* Disposição interna em grid */
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    align-items: center; /* Alinha verticalmente ao centro */
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-/* Área da imagem do personagem */
-.character-image {
-    position: relative; /* Para posicionar aura ou overlay */
-    aspect-ratio: 3/4; /* Proporção da imagem, ajuste aqui para aumentar ou diminuir (ex: 4/5) */
-    overflow: hidden; /* Esconde excesso da imagem */
+/* Character Image Container and Carousel */
+.character-image-container {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
 }
 
-/* Para o personagem principal, a proporção é a mesma */
-.main-character .character-image {
-    aspect-ratio: 3/4; /* Ajuste aqui se desejar uma proporção diferente para o personagem principal */
+.main-character .character-image-container {
+    aspect-ratio: 3/4;
 }
 
-/* Estilo da imagem do personagem */
-.character-image img {
-    width: 100%; /* Ajusta a largura ao container */
-    height: 100%; /* Ajusta a altura ao container */
-    object-fit: cover; /* Corta a imagem para preencher sem distorcer */
-    object-position: center top; /* Foca na parte superior central da imagem */
-    transition: transform var(--transition-slow); /* Animação de escala */
+.character-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-/* Efeito de aumentar a imagem ao passar o mouse */
-.character-card:hover .character-image img {
-    transform: scale(1.05); /* Aumento de escala */
+.carousel-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-/* Placeholder para personagens sem imagem ou carregando */
-.character-placeholder {
-    width: 100%; /* Completa o espaço do container */
-    height: 100%; /* Altura total */
-    display: flex; /* Centraliza conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    font-size: 4rem; /* Tamanho da fonte do ícone ou texto */
-    color: var(--medium-gray); /* Cor do texto */
-    background: var(--accent-black); /* Fundo de destaque */
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
 }
 
-/* Placeholder com tema de dragão (ajuste aqui para aumentar o tamanho do ícone/texto se necessário) */
-.character-placeholder.dragon-theme {
-    background: linear-gradient(135deg, #dc2626 0%, #f59e0b 100%);
-    color: var(--pure-white); /* Cor do texto ou ícone */
-    /* Se precisar aumentar o tamanho do ícone, ajuste font-size na tag ou adicione aqui */
+.carousel-image.active {
+    opacity: 1;
 }
 
-/* Placeholder com tema de água (pode aumentar o tamanho do ícone aqui também) */
-.character-placeholder.water-theme {
-    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--spacing-sm);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.character-carousel:hover .carousel-controls {
+    opacity: 1;
+}
+
+.carousel-btn {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
     color: var(--pure-white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
 }
 
-/* Placeholder com tema de terra */
-.character-placeholder.earth-theme {
-    background: linear-gradient(135deg, #059669 0%, #84cc16 100%);
-    color: var(--pure-white);
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
 }
 
-/* Placeholder com tema de tecnologia */
-.character-placeholder.tech-theme {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    color: var(--pure-white);
+.carousel-indicators {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-xs);
 }
 
-/* Aura do personagem, efeito de brilho ou halo ao passar o mouse */
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.indicator.active {
+    background: var(--pure-white);
+    transform: scale(1.2);
+}
+
 .character-aura {
-    position: absolute; /* Sobreposto ao cartão */
-    top: 0; /* Posicionado no topo */
-    left: 0; /* Esquerda */
-    right: 0; /* Direita */
-    bottom: 0; /* Inferior */
-    opacity: 0; /* Invisível inicialmente */
-    transition: opacity var(--transition-normal); /* Transição suave */
-    pointer-events: none; /* Não interfere em eventos de clique */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
 }
 
-/* Mostra a aura com opacidade reduzida ao passar o mouse no cartão */
 .character-card:hover .character-aura {
-    opacity: 0.3; /* Transparente */
+    opacity: 0.3;
 }
 
-/* Auras específicas, ajuste o tamanho do efeito com o tamanho do elemento pai */
 .masuke-aura {
     background: radial-gradient(circle at center, rgba(220, 38, 38, 0.4) 0%, transparent 70%);
-    /* Para aumentar o efeito, ajuste o tamanho do gradiente ou a opacidade */
 }
 .drakom-aura {
     background: radial-gradient(circle at center, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
@@ -273,272 +312,330 @@
 .moshu-aura {
     background: radial-gradient(circle at center, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
 }
+.macuso-aura {
+    background: radial-gradient(circle at center, rgba(139, 69, 19, 0.4) 0%, transparent 70%);
+}
 
-/* Informações do personagem */
 .character-info {
-    padding: var(--spacing-lg); /* Espaçamento interno */
+    padding: var(--spacing-lg);
 }
 
-/* Título do personagem */
 .character-info h3 {
-    font-size: 1.5rem; /* Tamanho do título */
-    font-weight: 700; /* Negrito forte */
-    margin-bottom: var(--spacing-xs); /* Espaçamento abaixo */
-    color: var(--pure-white); /* Cor do texto */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--pure-white);
 }
 
-/* Título da categoria ou função do personagem */
 .character-title {
-    color: var(--accent-red); /* Cor vermelha de destaque */
-    font-weight: 600; /* Negrito moderado */
-    font-size: 0.9rem; /* Tamanho do texto */
-    text-transform: uppercase; /* Letras maiúsculas */
-    letter-spacing: 0.05em; /* Espaçamento entre letras */
-    display: block; /* Block-level */
-    margin-bottom: var(--spacing-md); /* Margem inferior */
+    color: var(--accent-red);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: var(--spacing-md);
 }
 
-/* Texto com detalhes ou descrição do personagem */
 .character-info p {
     color: var(--light-gray);
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: var(--spacing-md); /* Margem inferior */
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
 }
 
-/* Lista de habilidades ou poderes do personagem */
 .character-abilities {
-    display: flex; /* Disposição em linha */
-    flex-wrap: wrap; /* Quebra de linha se necessário */
-    gap: var(--spacing-xs); /* Espaçamento entre habilidades */
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
 }
 
-/* Tag de cada habilidade (pode ajustar tamanho aqui) */
 .ability-tag {
-    background: var(--gradient-accent); /* Gradiente de fundo */
-    color: var(--pure-white); /* Cor do texto */
-    padding: var(--spacing-xs) var(--spacing-sm); /* Padding interno, ajuste aqui para aumentar o tamanho das tags */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    font-size: 0.8rem; /* Tamanho do texto */
-    font-weight: 500; /* Peso da fonte */
+    background: var(--gradient-accent);
+    color: var(--pure-white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
 }
 
-/* Cabeçalho de capítulo com botão de download */
+.ability-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Ability Modal */
+.ability-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.ability-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--secondary-black);
+    border-radius: var(--radius-xl);
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pure-white);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--medium-gray);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.modal-close:hover {
+    color: var(--pure-white);
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+}
+
+.ability-image {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.ability-image img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.ability-description p {
+    color: var(--light-gray);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Chapter Header */
 .chapter-header {
-    padding: var(--spacing-lg); /* Espaçamento interno */
-    cursor: pointer; /* Cursor aponta para clicar */
-    display: flex; /* Disposição em linha */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: space-between; /* Espaço entre elementos */
-    transition: background var(--transition-fast); /* Transição rápida */
-    border-bottom: 1px solid var(--dark-gray); /* Borda inferior */
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background var(--transition-fast);
+    border-bottom: 1px solid var(--dark-gray);
 }
 
-/* Área das ações do capítulo, como botões */
 .chapter-actions {
-    display: flex; /* Linha de botões */
-    align-items: center; /* Centralizados verticalmente */
-    gap: var(--spacing-md); /* Espaçamento entre botões */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
 }
 
-/* Botão de download do capítulo */
 .download-btn {
-    background: var(--gradient-accent); /* Gradiente de destaque */
-    border: none; /* Sem borda */
-    color: var(--pure-white); /* Cor do ícone/texto */
-    padding: var(--spacing-sm); /* Padding interno */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    cursor: pointer; /* Cursor pointer */
-    transition: all var(--transition-fast); /* Transição rápida */
-    width: 40px; /* Largura fixa */
-    height: 40px; /* Altura fixa */
-    display: flex; /* Centraliza conteúdo interno */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    font-size: 0.9rem; /* Tamanho do ícone ou texto */
+    background: var(--gradient-accent);
+    border: none;
+    color: var(--pure-white);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
 }
 
-/* Efeito ao passar o mouse no botão de download */
 .download-btn:hover {
-    transform: translateY(-2px); /* Movimento leve para cima */
-    box-shadow: var(--shadow-md); /* Sombra ao passar o mouse */
-    background: linear-gradient(135deg, #ef4444 0%, #8b5cf6 100%); /* Gradiente ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #ef4444 0%, #8b5cf6 100%);
 }
 
-/* Estado ativo do botão (pressionado) */
 .download-btn:active {
-    transform: translateY(0); /* Volta ao estado normal */
+    transform: translateY(0);
 }
 
-/* Seção do glossário */
+/* Glossary Section */
 .glossary-section {
-    background: var(--primary-black); /* Fundo preto */
+    background: var(--primary-black);
 }
 
-/* Abas de filtro do glossário */
 .glossary-tabs {
-    display: flex; /* Disposição em linha */
-    justify-content: center; /* Centralizado horizontalmente */
-    gap: var(--spacing-md); /* Espaçamento entre abas */
-    margin-bottom: var(--spacing-xl); /* Margem inferior */
-    flex-wrap: wrap; /* Quebra de linha se necessário */
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
 }
 
-/* Botões de aba do glossário, ajuste tamanho aqui se desejar aumentar */
 .tab-btn {
-    background: var(--tertiary-black); /* Fundo preto terciário */
-    border: 2px solid var(--dark-gray); /* Borda cinza escura */
-    color: var(--light-gray); /* Cor do texto */
-    padding: var(--spacing-sm) var(--spacing-lg); /* Padding interno, ajuste aqui para aumentar tamanho do botão */
-    border-radius: var(--radius-lg); /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de clique */
-    font-weight: 600; /* Fonte em negrito */
-    display: flex; /* Disposição em linha */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-xs); /* Espaçamento entre ícone e texto */
-    transition: all var(--transition-fast); /* Transição rápida */
+    background: var(--tertiary-black);
+    border: 2px solid var(--dark-gray);
+    color: var(--light-gray);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all var(--transition-fast);
 }
 
-/* Efeito ao passar o mouse nas abas */
 .tab-btn:hover {
-    border-color: var(--accent-red); /* Cor da borda ao passar o mouse */
-    color: var(--pure-white); /* Cor do texto */
+    border-color: var(--accent-red);
+    color: var(--pure-white);
 }
 
-/* Aba ativa no glossário */
 .tab-btn.active {
-    background: var(--gradient-accent); /* Fundo em gradiente */
-    border-color: transparent; /* Remove a borda */
-    color: var(--pure-white); /* Cor do texto */
+    background: var(--gradient-accent);
+    border-color: transparent;
+    color: var(--pure-white);
 }
 
-/* Conteúdo das abas (escondido por padrão) */
 .tab-content {
-    display: none; /* Escondido */
+    display: none;
 }
 
-/* Mostra a aba ativa */
 .tab-content.active {
-    display: block; /* Exibe */
+    display: block;
 }
 
-/* Grid de itens do glossário, ajuste o tamanho mínimo para aumentar o tamanho das cartas */
 .glossary-grid {
-    display: grid; /* Grid CSS */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Altere 350px para um valor maior para aumentar o tamanho das colunas */
-    gap: var(--spacing-xl); /* Espaçamento entre itens */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
 }
 
-/* Cartão de glossário */
 .glossary-card {
-    background: var(--secondary-black); /* Fundo preto */
-    border-radius: var(--radius-lg); /* Bordas arredondadas */
-    padding: var(--spacing-lg); /* Padding interno */
-    box-shadow: var(--shadow-md); /* Sombra média */
-    transition: all var(--transition-normal); /* Transições normais */
-    border-left: 4px solid var(--accent-red); /* Faixa lateral de destaque */
+    background: var(--secondary-black);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border-left: 4px solid var(--accent-red);
 }
 
-/* Efeito ao passar o mouse no cartão */
 .glossary-card:hover {
-    transform: translateY(-4px); /* Leve movimento para cima */
-    box-shadow: var(--shadow-lg); /* Sombra maior */
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
-/* Cores específicas de cartões, ajuste aqui para aumentar o destaque */
 .mdal-card {
-    border-left-color: var(--accent-red); /* Vermelho */
+    border-left-color: var(--accent-red);
 }
 .phoenix-card {
-    border-left-color: var(--accent-gold); /* Dourado */
+    border-left-color: var(--accent-gold);
 }
 .demons-card {
-    border-left-color: var(--accent-purple); /* Roxo */
+    border-left-color: var(--accent-purple);
 }
 
-/* Cabeçalho do cartão */
 .card-header {
-    display: flex; /* Disposição em linha */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-md); /* Espaçamento entre itens */
-    margin-bottom: var(--spacing-md); /* Margem inferior */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
-/* Ícone ou foto da sociedade/organização, ajuste o tamanho aqui para aumentar a imagem */
 .society-icon {
-    width: 150px; /* Aumente esse valor para maior tamanho da imagem */
-    height: 150px; /* Mesmo valor do width para manter o quadrado */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    overflow: hidden; /* Esconde excesso */
-    flex-shrink: 0; /* Impede encolhimento */
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-/* Imagem da sociedade dentro do ícone, ajuste o tamanho da imagem aqui se necessário */
 .society-image {
-    width: 100%; /* Preenche o container */
-    height: 100%; /* Preenche o container */
-    object-fit: cover; /* Cobre toda a área, ajuste aqui para controle */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Título da sociedade ou organização */
 .card-header h3 {
-    font-size: 1.3rem; /* Tamanho do texto */
-    font-weight: 700; /* Negrito */
-    margin-bottom: var(--spacing-xs); /* Espaço abaixo */
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
 }
 
-/* Tipo ou categoria da sociedade (ex: guilda, clube, etc.) */
 .society-type {
-    background: var(--tertiary-black); /* Fundo preto escuro */
-    color: var(--light-gray); /* Cor do texto */
-    padding: var(--spacing-xs) var(--spacing-sm); /* Ajuste aqui para aumentar o padding e tamanho do badge */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    font-size: 0.8rem; /* Tamanho do texto */
-    font-weight: 500; /* Peso da fonte */
+    background: var(--tertiary-black);
+    color: var(--light-gray);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
-/* Texto explicativo ou descrição do glossário */
 .glossary-card p {
     color: var(--light-gray);
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: var(--spacing-md); /* Margem inferior */
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
 }
 
-/* Lista de membros, ajuste o tamanho do texto aqui */
 .members-list {
     color: var(--medium-gray);
-    font-size: 0.9rem; /* Tamanho do texto */
+    font-size: 0.9rem;
 }
 
-/* Destaca nomes ou itens na lista de membros */
 .members-list strong {
     color: var(--pure-white);
 }
 
-/* Grid de técnicas ou habilidades especiais, ajuste o tamanho mínimo para aumentar o tamanho das cartas */
 .techniques-grid {
-    display: grid; /* Grid CSS */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Aumente 250px para um valor maior, por exemplo 350px */
-    gap: var(--spacing-lg); /* Espaçamento entre elementos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
 }
 
-/* Cartão de técnica ou habilidade */
 .technique-card {
-    background: var(--secondary-black); /* Fundo preto */
-    border-radius: var(--radius-lg); /* Bordas arredondadas */
-    padding: var(--spacing-lg); /* Padding interno, aumente aqui para maior espaçamento */
-    box-shadow: var(--shadow-md); /* Sombra média */
-    transition: all var(--transition-normal); /* Transição padrão */
-    border-top: 3px solid var(--accent-red); /* Linha superior de destaque, ajuste a cor se desejar mudar */
-    text-align: center; /* Centraliza o texto */
+    background: var(--secondary-black);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    border-top: 3px solid var(--accent-red);
+    text-align: center;
 }
 
-/* Efeito ao passar o mouse na técnica */
 .technique-card:hover {
-    transform: translateY(-4px); /* Movimento para cima */
-    box-shadow: var(--shadow-lg); /* Sombra maior */
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
-/* Técnicas específicas com cores de destaque, ajuste a espessura ou cor para maior destaque */
 .darkness-technique {
     border-top-color: var(--accent-purple);
 }
@@ -552,62 +649,54 @@
     border-top-color: var(--accent-blue);
 }
 
-/* Ícone ou imagem da técnica, ajuste o tamanho aqui para maior imagem */
 .technique-icon {
-    width: 200px; /* Aumente para maior tamanho */
-    height: 200px; /* Mesmo valor do width para manter proporção quadrada */
-    margin: 0 auto var(--spacing-md) auto; /* Centraliza horizontalmente e com espaçamento inferior */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    overflow: hidden; /* Esconde excesso */
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-md) auto;
+    border-radius: var(--radius-md);
+    overflow: hidden;
 }
 
-/* Imagem da técnica dentro do ícone, ajuste o tamanho da imagem aqui se necessário */
 .technique-image {
-    width: 100%; /* Preenche o container */
-    height: 100%; /* Preenche o container */
-    object-fit: cover; /* Ajusta a imagem ao espaço */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Título da técnica */
 .technique-card h4 {
-    font-size: 1.2rem; /* Aumente para um texto maior */
-    font-weight: 600; /* Peso da fonte */
-    margin-bottom: var(--spacing-sm); /* Espaçamento inferior */
-    color: var(--pure-white); /* Cor do texto */
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--pure-white);
 }
 
-/* Descrição da técnica */
 .technique-card p {
     color: var(--light-gray);
-    line-height: 1.6; /* Espaçamento entre linhas */
+    line-height: 1.6;
 }
 
-/* Grid de invocações ou habilidades especiais, ajuste o tamanho mínimo para aumentar o tamanho das cartas */
 .invocations-grid {
-    display: grid; /* Grid CSS */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mude 300px para um valor maior, ex: 400px */
-    gap: var(--spacing-xl); /* Espaçamento */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
 }
 
-/* Cartão de invocação ou habilidade */
 .invocation-card {
-    background: var(--secondary-black); /* Fundo preto */
-    border-radius: var(--radius-lg); /* Bordas arredondadas */
-    padding: var(--spacing-xl); /* Padding interno, aumente aqui para maior espaçamento */
-    box-shadow: var(--shadow-md); /* Sombra média */
-    transition: all var(--transition-normal); /* Transição padrão */
-    text-align: center; /* Centraliza o conteúdo */
-    border: 2px solid var(--dark-gray); /* Borda cinza escuro */
+    background: var(--secondary-black);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    text-align: center;
+    border: 2px solid var(--dark-gray);
 }
 
-/* Efeito ao passar o mouse na invocação */
 .invocation-card:hover {
-    transform: translateY(-4px); /* Movimento para cima */
-    box-shadow: var(--shadow-lg); /* Sombra maior */
-    border-color: var(--accent-red); /* Cor da borda ao passar o mouse */
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-red);
 }
 
-/* Invocações específicas com fundo diferenciados, ajuste o tamanho do fundo se necessário */
 .death-invocation {
     background: linear-gradient(135deg, var(--secondary-black) 0%, rgba(220, 38, 38, 0.1) 100%);
 }
@@ -615,137 +704,121 @@
     background: linear-gradient(135deg, var(--secondary-black) 0%, rgba(245, 158, 11, 0.1) 100%);
 }
 
-/* Ícone ou imagem da invocação, ajuste o tamanho aqui para maior imagem */
 .invocation-icon {
-    width: 200px; /* Aumente para maior tamanho */
-    height: 200px; /* O mesmo valor do width */
-    margin: 0 auto var(--spacing-md) auto; /* Centraliza horizontalmente */
-    border-radius: var(--radius-md); /* Bordas arredondadas */
-    overflow: hidden; /* Esconde excesso */
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--spacing-md) auto;
+    border-radius: var(--radius-md);
+    overflow: hidden;
 }
 
-/* Imagem da invocação dentro do ícone */
 .invocation-image {
-    width: 100%; /* Preenche o container */
-    height: 100%; /* Preenche o container */
-    object-fit: cover; /* Ajusta a imagem ao espaço */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Título da invocação */
 .invocation-card h4 {
-    font-size: 1.4rem; /* Aumente para maior destaque */
+    font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: var(--spacing-md);
     color: var(--pure-white);
 }
 
-/* Descrição da invocação */
 .invocation-card p {
     color: var(--light-gray);
     line-height: 1.6;
 }
 
-/* Rodapé do site */
+/* Footer */
 .footer {
-    background: var(--secondary-black); /* Fundo preto escuro */
-    border-top: 1px solid var(--dark-gray); /* Borda superior */
-    padding: var(--spacing-2xl) 0 var(--spacing-lg) 0; /* Espaçamento interno */
+    background: var(--secondary-black);
+    border-top: 1px solid var(--dark-gray);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg) 0;
 }
 
-/* Conteúdo do rodapé em grid, ajustável se desejar mais espaço ou mais colunas */
 .footer-content {
-    display: grid; /* Grid CSS */
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais, ajuste aqui se desejar mais colunas */
-    gap: var(--spacing-2xl); /* Espaçamento entre colunas */
-    align-items: center; /* Centraliza verticalmente */
-    margin-bottom: var(--spacing-xl); /* Espaçamento inferior */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
 }
 
-/* Seção do autor no rodapé */
 .author-section {
-    display: flex; /* Disposição em linha */
-    align-items: center; /* Centraliza verticalmente */
-    gap: var(--spacing-lg); /* Espaçamento entre itens */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
 }
 
-/* Foto do autor, ajuste o tamanho aqui para aumentar a imagem */
 .author-photo {
-    width: 80px; /* Aumente para maior tamanho */
-    height: 80px; /* Mesmo valor para manter quadrado */
-    border-radius: 50%; /* Circular */
-    object-fit: cover; /* Ajusta a imagem ao container */
-    border: 3px solid var(--accent-red); /* Borda de destaque */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-red);
 }
 
-/* Nome do autor */
 .author-details h4 {
-    font-size: 1.2rem; /* Tamanho do texto */
-    font-weight: 600; /* Negrito */
-    margin-bottom: var(--spacing-xs); /* Margem inferior */
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
 }
 
-/* Citação ou quote do autor */
 .author-quote {
     color: var(--medium-gray);
-    font-style: italic; /* Itálico */
+    font-style: italic;
     margin-bottom: var(--spacing-sm);
 }
 
-/* Ícones ou links das redes sociais */
 .social-links {
-    display: flex; /* Disposição em linha */
-    gap: var(--spacing-sm); /* Espaçamento entre links */
+    display: flex;
+    gap: var(--spacing-sm);
 }
 
-/* Link de rede social, ajuste o tamanho aqui se desejar ícones maiores */
 .social-link {
-    display: flex; /* Centraliza ícone */
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px; /* Aumente aqui para ícones maiores */
-    height: 35px; /* Mesmo valor do width */
-    background: var(--tertiary-black); /* Fundo preto */
-    color: var(--light-gray); /* Cor do ícone */
-    border-radius: 50%; /* Circular */
-    text-decoration: none; /* Sem sublinhado */
-    transition: all var(--transition-fast); /* Transição rápida */
+    width: 35px;
+    height: 35px;
+    background: var(--tertiary-black);
+    color: var(--light-gray);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all var(--transition-fast);
 }
 
-/* Efeito ao passar o mouse nos links sociais */
 .social-link:hover {
-    background: var(--accent-red); /* Fundo vermelho */
-    color: var(--pure-white); /* Cor do ícone */
-    transform: translateY(-2px); /* Movimento leve para cima */
+    background: var(--accent-red);
+    color: var(--pure-white);
+    transform: translateY(-2px);
 }
 
-/* Quote final no rodapé */
 .footer-quote {
-    text-align: right; /* Alinha à direita */
+    text-align: right;
 }
 
-/* Estilo do bloco de citação */
 .footer-quote blockquote {
-    font-family: var(--font-secondary); /* Fonte secundária */
-    font-size: 1.1rem; /* Tamanho do texto */
-    font-style: italic; /* Itálico */
-    color: var(--light-gray); /* Cor */
-    line-height: 1.6; /* Espaçamento entre linhas */
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--light-gray);
+    line-height: 1.6;
 }
 
-/* Autores da citação */
 .footer-quote cite {
-    display: block; /* Quebra de linha */
+    display: block;
     margin-top: var(--spacing-sm);
-    color: var(--accent-red); /* Cor vermelha */
-    font-weight: 600; /* Negrito */
-    font-style: normal; /* Normal */
+    color: var(--accent-red);
+    font-weight: 600;
+    font-style: normal;
 }
 
-/* Texto de rodapé inferior */
 .footer-bottom {
-    text-align: center; /* Centralizado */
-    padding-top: var(--spacing-lg); /* Espaçamento superior */
-    border-top: 1px solid var(--dark-gray); /* Borda superior */
-    color: var(--medium-gray); /* Cor do texto */
-    font-size: 0.9rem; /* Tamanho do texto */
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--dark-gray);
+    color: var(--medium-gray);
+    font-size: 0.9rem;
 }

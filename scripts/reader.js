@@ -31,7 +31,6 @@ class ChapterReader {
             2: {
                 title: "Capítulo 2 - Masuke VS Drakom",
                 pages: [
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2010.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/paggina%201.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%202.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%203.jpg",
@@ -41,6 +40,7 @@ class ChapterReader {
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%207.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%208.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%209.jpg",
+                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2010.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2011.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2012.jpg",
                     "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2013.jpg",
@@ -170,44 +170,34 @@ class ChapterReader {
         
         pagesContainer.innerHTML = '';
         
-        // Load current page and preload next/previous
-        const pagesToLoad = [
-            this.currentPage - 1,
-            this.currentPage,
-            this.currentPage + 1
-        ].filter(index => index >= 0 && index < this.totalPages);
+        // Create image element for current page
+        const img = document.createElement('img');
+        img.src = this.pages[this.currentPage];
+        img.alt = `Página ${this.currentPage + 1}`;
+        img.className = 'reader-page';
+        img.loading = 'eager';
         
-        pagesToLoad.forEach((pageIndex, i) => {
-            const img = document.createElement('img');
-            img.src = this.pages[pageIndex];
-            img.alt = `Pagina ${pageIndex + 1}`;
-            img.className = 'reader-page';
-            img.loading = i === 1 ? 'eager' : 'lazy'; // Eager load current page
-            
-            // Show only current page
-            if (pageIndex === this.currentPage) {
-                img.style.display = 'block';
-            } else {
-                img.style.display = 'none';
-            }
-            
-            // Add loading state
-            img.addEventListener('load', () => {
-                img.style.opacity = '1';
-            });
-            
-            img.addEventListener('error', () => {
-                img.alt = 'Erro ao carregar imagem';
-                img.style.background = 'var(--tertiary-black)';
-                img.style.color = 'var(--medium-gray)';
-                img.style.display = 'flex';
-                img.style.alignItems = 'center';
-                img.style.justifyContent = 'center';
-                img.style.minHeight = '400px';
-            });
-            
-            pagesContainer.appendChild(img);
+        // Add loading state
+        img.addEventListener('load', () => {
+            img.style.opacity = '1';
         });
+        
+        img.addEventListener('error', () => {
+            console.error(`Failed to load image: ${img.src}`);
+            img.alt = 'Erro ao carregar imagem';
+            img.style.background = 'var(--tertiary-black)';
+            img.style.color = 'var(--medium-gray)';
+            img.style.display = 'flex';
+            img.style.alignItems = 'center';
+            img.style.justifyContent = 'center';
+            img.style.minHeight = '400px';
+            img.textContent = 'Erro ao carregar página';
+        });
+        
+        pagesContainer.appendChild(img);
+        
+        // Preload adjacent pages
+        this.preloadAdjacentPages();
     }
     
     nextPage() {
@@ -242,19 +232,8 @@ class ChapterReader {
             totalPagesSpan.textContent = this.totalPages;
         }
         
-        // Update page display
-        const pages = document.querySelectorAll('.reader-page');
-        pages.forEach((page, index) => {
-            if (index === this.currentPage) {
-                page.style.display = 'block';
-                page.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                page.style.display = 'none';
-            }
-        });
-        
-        // Preload adjacent pages
-        this.preloadAdjacentPages();
+        // Load new page
+        this.loadPages();
         
         // Update navigation buttons
         this.updateNavigation();
@@ -267,11 +246,8 @@ class ChapterReader {
         ].filter(index => index >= 0 && index < this.totalPages);
         
         pagesToPreload.forEach(pageIndex => {
-            const existingImg = document.querySelector(`img[src="${this.pages[pageIndex]}"]`);
-            if (!existingImg) {
-                const img = new Image();
-                img.src = this.pages[pageIndex];
-            }
+            const img = new Image();
+            img.src = this.pages[pageIndex];
         });
     }
     
