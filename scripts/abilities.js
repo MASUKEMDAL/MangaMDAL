@@ -5,41 +5,41 @@ class AbilitiesModal {
             // Masuke abilities
             'masuren': {
                 title: 'Masuren',
-                image: 'public/images/MASUREN.png',
+                image: 'public/images/Masuke/MASUREN.png',
                 description: 'Energia elétrica sombria com raios escuros e brilho arroxeado. Esta técnica permite a Masuke canalizar a energia das trevas através de seu corpo, criando descargas elétricas devastadoras que podem ser usadas tanto em combate corpo a corpo quanto em ataques à distância.'
             },
             'death-eyes': {
                 title: 'Death Eyes',
-                image: 'public/images/Death Eyes.jpg',
+                image: 'public/images/Masuke/Death Eyes.jpg',
                 description: 'Olhos completamente negros que permitem a Masuke invocar Mr. Morte e ver através das dimensões espirituais. Esta habilidade ancestral é herança de sua linhagem sombria, permitindo-lhe enxergar a morte e manipular energias necromânticas.'
             },
             'fogo-trevas': {
                 title: 'Fogo das Trevas',
-                image: 'public/images/fireblack.png',
+                image: 'public/images/Masuke/fireblack.png',
                 description: 'Fogo negro com labaredas roxas que causa paralisia e dor contínua. Diferente do fogo comum, estas chamas se alimentam da energia espiritual do oponente, causando danos tanto físicos quanto espirituais.'
             },
             
             // Drakom abilities
             'draison': {
                 title: 'Draison',
-                image: 'public/images/Draison.jpg',
+                image: 'public/images/Drakom/Draison.jpg',
                 description: 'Esfera giratória de energia dracônica vermelha que causa explosão em espiral. Esta técnica concentra todo o poder dracônico de Drakom em uma esfera de energia pura, capaz de devastar grandes áreas com sua explosão controlada.'
             },
             'making': {
                 title: 'Making',
-                image: 'public/images/making.jpg',
+                image: 'public/images/Drakom/making.jpg',
                 description: 'Teletransporte instantâneo baseado em energia dracônica sensitiva. Drakom pode se mover através do espaço utilizando portais de energia dracônica, permitindo-lhe aparecer instantaneamente em qualquer local dentro de seu alcance.'
             },
             'invocacao-dragoes': {
                 title: 'Invocação de Dragões',
-                image: 'public/images/invocdrak.jpg',
+                image: 'public/images/Drakom/Invocacao-Drakom.jpg',
                 description: 'Capacidade de invocar grandes dragões vermelhos de energia para ataque, defesa e montaria espiritual. Estes dragões são manifestações da essência dracônica de Drakom, obedecendo apenas à sua vontade.'
             },
             
             // Shizuke abilities
             'fenix-agua': {
                 title: 'Fênix de Água',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Shizuke/Shizuke.png',
                 description: 'Invocação de uma fênix feita de água pura que pode regenerar e atacar simultaneamente. Esta criatura aquática possui a capacidade de renascer das próprias águas, tornando-se praticamente imortal em combate.'
             },
             'shizurem': {
@@ -47,26 +47,36 @@ class AbilitiesModal {
                 image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
                 description: 'Técnica de controle total sobre as águas, permitindo manipular desde gotas até tsunamis. Shizuke pode moldar a água em qualquer forma desejada, desde armas cortantes até escudos protetivos.'
             },
+            'Barreira-agua': {
+                title: 'Barreira-agua',
+                image: 'public/images/Shizuke/Barreira de Agua.png',
+                description: 'Técnica de controle total sobre as águas, permitindo manipular desde gotas até tsunamis. Shizuke pode moldar a água em qualquer forma desejada, desde armas cortantes até escudos protetivos.'
+            },
             'replica-agua': {
                 title: 'Réplica de Água',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Shizuke/Replica de Agua.png',
                 description: 'Criação de clones feitos de água que podem lutar independentemente. Estas réplicas possuem as mesmas habilidades de Shizuke, mas são limitadas pela quantidade de água disponível no ambiente.'
             },
             
             // Hiroshi abilities
             'armadura-dragao': {
                 title: 'Armadura de Dragão',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Hiroshi/armadura.png',
                 description: 'Armadura de terra que se molda como escamas de dragão, oferecendo defesa suprema. Esta proteção não apenas absorve ataques físicos, mas também pode refletir energia espiritual de volta ao atacante.'
             },
             'muralha-terra': {
                 title: 'Muralha de Terra',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Hiroshi/muralha.png',
+                description: 'Criação de muralhas massivas de terra e rocha para defesa e controle de campo. Hiroshi pode erguer estas estruturas instantaneamente, alterando completamente o terreno de batalha.'
+            },
+                        'maos-dragao': {
+                title: 'maos-dragao',
+                image: 'public/images/Hiroshi/hiroshi.png',
                 description: 'Criação de muralhas massivas de terra e rocha para defesa e controle de campo. Hiroshi pode erguer estas estruturas instantaneamente, alterando completamente o terreno de batalha.'
             },
             'pisada-sismica': {
                 title: 'Pisada Sísmica',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Hiroshi/bootst.png',
                 description: 'Golpe no solo que gera ondas sísmicas devastadoras em área ampla. Esta técnica pode causar terremotos localizados, desequilibrando inimigos e destruindo estruturas.'
             },
             
@@ -90,12 +100,12 @@ class AbilitiesModal {
             // Macuso abilities
             'olho-destruicao': {
                 title: 'Olho da Destruição',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Macuso/Olho da destruicao.png',
                 description: 'Lança raio destrutivo de energia sombria pelo olhar. Este ataque pode perfurar as defesas mais resistentes e causa danos devastadores em linha reta, sendo uma das técnicas mais temidas da Sociedade Demons.'
             },
             'distorcao-sombria': {
                 title: 'Distorção Sombria',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Macuso/fogo sombrio.png',
                 description: 'Cria campos de distorção visual e sensorial com energia demoníaca. Esta habilidade confunde os sentidos dos oponentes, fazendo-os ver ilusões e perder a noção de realidade durante o combate.'
             },
             'garras-inferno': {
@@ -105,12 +115,12 @@ class AbilitiesModal {
             },
             'passagem-sombria': {
                 title: 'Passagem Sombria',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Macuso/passagem sombria.png',
                 description: 'Teleporte através de fendas escuras que ele mesmo abre no espaço. Macuso pode viajar instantaneamente através das dimensões sombrias, aparecendo em qualquer local coberto por trevas.'
             },
             'rugido-demoniaco': {
                 title: 'Rugido Demoníaco',
-                image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+                image: 'public/images/Macuso/Rugido Demoniaco.png',
                 description: 'Grito com pressão sônica e indução de medo profundo. Este rugido pode fazer inimigos desmaiarem de terror puro, além de causar danos físicos através de ondas sonoras devastadoras.'
             }
         };
