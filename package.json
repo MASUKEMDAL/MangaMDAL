@@ -1,0 +1,27 @@
+{
+  "name": "mdal-cronicas-de-masuke",
+  "version": "1.0.0",
+  "description": "Site oficial do mangá MDAL - As Crônicas de Masuke",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required for this vanilla HTML/CSS/JS project'",
+    "start": "echo 'Open index.html in your browser to view the project'",
+    "dev": "echo 'This is a static site. Open index.html in your browser or use a local server.'"
+  },
+  "keywords": [
+    "manga",
+    "novel",
+    "mdal",
+    "masuke",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Matheus Marques Ferreira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masukemdal/mdal-cronicas-de-masuke.git"
+  },
+  "homepage": "https://github.com/masukemdal/mdal-cronicas-de-masuke#readme"
+}
