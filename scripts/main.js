@@ -190,28 +190,6 @@ class MDALSite {
     }
 }
 
-// Novel Chapter Toggle Functionality
-function toggleNovelChapter(chapterId) {
-    const chapterContent = document.getElementById(chapterId);
-    const chapterHeader = chapterContent?.previousElementSibling;
-    
-    if (chapterContent && chapterHeader) {
-        const isActive = chapterContent.classList.contains('active');
-        
-        // Close all other chapters
-        document.querySelectorAll('.chapter-content').forEach(content => {
-            content.classList.remove('active');
-            content.previousElementSibling?.classList.remove('active');
-        });
-        
-        // Toggle current chapter
-        if (!isActive) {
-            chapterContent.classList.add('active');
-            chapterHeader.classList.add('active');
-        }
-    }
-}
-
 // PDF Download Functionality
 function downloadPDF(chapterNumber) {
     let fileName = '';
@@ -233,6 +211,10 @@ function downloadPDF(chapterNumber) {
         case 4:
             fileName = 'public/novels/Capítulo 4 - O Confronto com a Demons.docx';
             downloadName = 'MDAL - Capítulo 4 - O Confronto com a Demons.docx';
+            break;
+        case 5:
+            fileName = 'public/novels/Capítulo 5 - O verdadeiro poder de Drakom.docx';
+            downloadName = 'MDAL - Capítulo 5 - O Verdadeiro Poder de Drakom.docx';
             break;
         default:
             console.error('Capítulo não encontrado');
@@ -347,7 +329,6 @@ function scrollToSection(sectionId) {
 const mdalSite = new MDALSite();
 
 // Export functions for global access
-window.toggleNovelChapter = toggleNovelChapter;
 window.downloadPDF = downloadPDF;
 window.switchTab = switchTab;
 window.scrollToSection = scrollToSection;
