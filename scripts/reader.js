@@ -25,27 +25,32 @@ class ChapterReader {
                     "public/images/capitulo1/12.jpg",
                     "public/images/capitulo1/13.jpg",
                     "public/images/capitulo1/14.jpg",
-                    "public/images/capitulo1/15.jpg"
+                    "public/images/capitulo1/15.jpg",
+                    "public/images/capitulo1/extra 1.png",
+                    "public/images/capitulo1/extra 2.png",
+                    "public/images/capitulo1/extra3.png",
+                    "public/images/capitulo1/extra 4.jpg",
+                    "public/images/capitulo1/extra 5.jpg"
                 ]
             },
             2: {
                 title: "Capítulo 2 - Masuke VS Drakom",
                 pages: [
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/paggina%201.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%202.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%203.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/pagian%204.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%205.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%206.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%207.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%208.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%209.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2010.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2011.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2012.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2013.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2014.jpg",
-                    "https://raw.githubusercontent.com/MASUKEMDAL/MDAL-Capitulo-1/refs/heads/main/Pagina%2015.jpg"
+                    "public/images/Capitulo2/1.jpg",
+                    "public/images/Capitulo2/2.jpg",
+                    "public/images/Capitulo2/3.jpg",
+                    "public/images/Capitulo2/4.jpg",
+                    "public/images/Capitulo2/5.jpg",
+                    "public/images/Capitulo2/6.jpg",
+                    "public/images/Capitulo2/7.jpg",
+                    "public/images/Capitulo2/8.jpg",
+                    "public/images/Capitulo2/9.jpg",
+                    "public/images/Capitulo2/10.jpg",
+                    "public/images/Capitulo2/11.jpg",
+                    "public/images/Capitulo2/12.jpg",
+                    "public/images/Drakom/Making Manga.png",
+                    "public/images/Capitulo2/1000280244.png",
+                    "public/images/Capitulo2/Masuke x Drakom.jpg"
                 ]
             }
         };
