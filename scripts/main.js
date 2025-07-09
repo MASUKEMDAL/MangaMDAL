@@ -216,6 +216,10 @@ function downloadPDF(chapterNumber) {
             fileName = 'public/novels/Capítulo 5 - O verdadeiro poder de Drakom.docx';
             downloadName = 'MDAL - Capítulo 5 - O Verdadeiro Poder de Drakom.docx';
             break;
+        case 6:
+            fileName = 'public/novels/Capítulo 6 - A Missão de Hiroshi.docx';
+            downloadName = 'MDAL - Capítulo 6 - A Missão de Hiroshi.docx';
+            break;
         default:
             console.error('Capítulo não encontrado');
             return;
