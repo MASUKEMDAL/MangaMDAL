@@ -220,6 +220,10 @@ function downloadPDF(chapterNumber) {
             fileName = 'public/novels/Capítulo 6 - A Missão de Hiroshi.docx';
             downloadName = 'MDAL - Capítulo 6 - A Missão de Hiroshi.docx';
             break;
+        case 7:
+            fileName = 'public/novels/Capítulo 7 – Invasão na Sociedade dos Dragões.docx';
+            downloadName = 'MDAL - Capítulo 7 - Invasão na Sociedade dos Dragões.docx';
+            break;
         default:
             console.error('Capítulo não encontrado');
             return;
