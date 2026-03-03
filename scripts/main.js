@@ -224,6 +224,10 @@ function downloadPDF(chapterNumber) {
             fileName = 'public/novels/Capítulo 7 – Invasão na Sociedade dos Dragões.docx';
             downloadName = 'MDAL - Capítulo 7 - Invasão na Sociedade dos Dragões.docx';
             break;
+        case 8:
+            fileName = 'public/novels/CAPITULO_8_-_O_Tabuleiro_de_Moshu.docx';
+            downloadName = 'MDAL - Capítulo 8 - O Tabuleiro de Moshu.docx';
+            break;
         default:
             console.error('Capítulo não encontrado');
             return;
