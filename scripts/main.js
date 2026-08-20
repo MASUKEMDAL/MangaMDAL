@@ -228,6 +228,10 @@ function downloadPDF(chapterNumber) {
             fileName = 'public/novels/CAPITULO_8_-_O_Tabuleiro_de_Moshu.docx';
             downloadName = 'MDAL - Capítulo 8 - O Tabuleiro de Moshu.docx';
             break;
+        case 9:
+            fileName = 'public/novels/CAPITULO_9._-_Kaminari_&_os_Boatos_no_Mundo.docx';
+            downloadName = 'MDAL - Capítulo 9 - Kaminari & os Boatos no Mundo.docx';
+            break;
         default:
             console.error('Capítulo não encontrado');
             return;
